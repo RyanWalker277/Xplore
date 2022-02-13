@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dashboard</title>
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard_css.css' %}">
+    <script type="text/javascript" src="{% static 'templates\dashboard.html' %}"></script>
+    <script src="https://kit.fontawesome.com/87c158d066.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <div class="app-header header-shadow">
+            <div class="app-header__logo">
+                <div class="header__pane">
+                    <div>
+                        <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                            data-class="closed-sidebar">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="app-header__mobile-menu">
+                <div>
+                    <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="app-header__menu">
+                <span>
+                    <button type="button"
+                        class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
+                        </span>
+                    </button>
+                </span>
+            </div>
+            <div class="app-header__content ">
+                <div class="app-header-right">
+                    <div class="header-btn-lg pr-0">
+                        <div class="widget-content p-0">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left">
+                                    <div class="btn-group">
+                                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            class="p-0 btn">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg"
+                                                alt="">
+                                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
+                                        </a>
+                                        <div tabindex="-1" role="menu" aria-hidden="true"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <button type="button" tabindex="0" class="dropdown-item">
+                                                User
+                                                Account
+                                            </button>
+                                            <a href="profile_settings"><button type="button" tabindex="0" class="dropdown-item">Profile Settings</button></a>
+                                            <a href="login">
+                                                <h6 tabindex="-1" class="dropdown-header">Sign Out</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content-left  ml-3 header-user-info">
+                                    <div class="widget-heading">Sample User</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-main">
+            <div class="app-sidebar sidebar-shadow">
+                <div class="app-header__logo">
+                    <div class="logo-src"></div>
+                    <div class="header__pane ml-auto">
+                        <div>
+                            <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
+                                data-class="closed-sidebar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-header__mobile-menu">
+                    <div>
+                        <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="app-header__menu">
+                    <span>
+                        <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                            <span class="btn-icon-wrapper">
+                                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                            </span>
+                        </button>
+                    </span>
+                </div>
+                <div class="scrollbar-sidebar">
+                    <div class="app-sidebar__inner">
+                        <ul class="vertical-nav-menu">
+                            <li class="app-sidebar__heading">Blogs</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-solid fa-fire"></i>
+                                    All Blogs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-solid fa-fire"></i>
+                                    Trending Topics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa metismenu-icon fa-solid fa-child"></i>
+                                    For You
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">College</li>
+                            <li>
+                                <a href="dashboard-boxes.html">
+                                    <i class="metismenu-icon fa fa-solid fa-graduation-cap"></i>
+                                    Top Colleges Near You
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-boxes.html">
+                                    <i class="metismenu-icon pe-7s-display2"></i>
+                                    Upcoming Entrance Exams
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-boxes.html">
+                                    <i class="metismenu-icon fa fa-solid fa-truck"></i>
+                                    Track Your College Application
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">College</li>
+                            <li>
+                                <a href="dashboard-boxes.html">
+                                    <i class="metismenu-icon fa fa-solid fa-school"></i>
+                                    Top Schools Near You
+                                </a>
+                            </li>
+                            <li>
+                                <a href="dashboard-boxes.html">
+                                    <i class="metismenu-icon fa fa-solid fa-truck"></i>
+                                    Track Your School Application
+                                </a>
+                            </li>
+                            <li class="app-sidebar__heading">PRO Version</li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-solid fa-greater-than"></i>
+                                    Compare Colleges
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="metismenu-icon fa fa-solid fa-greater-than"></i>
+                                    </i>
+                                    Compare Schools
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="app-main__outer">
+                <!--main content-->
+                <div class="w-full px-6">
+                    <div
+                        class="mt-8 relative rounded-lg bg-indigo-700 container mx-auto flex flex-col items-center pt-12 sm:pt-24 pb-24 sm:pb-32 md:pb-48 lg:pb-56 xl:pb-64">
+                        <img class="mr-2 lg:mr-12 mt-2 lg:mt-12 absolute right-0 top-0"
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg2.svg"
+                            alt="bg" />
+                        <img class="ml-2 lg:ml-12 mb-2 lg:mb-12 absolute bottom-0 left-0"
+                            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/center_aligned_with_image-svg3.svg"
+                            alt="bg" />
+
+                        <div class="w-11/12 sm:w-2/3 mb-5 sm:mb-10">
+                            <h1
+                                class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center text-white font-bold leading-tight">
+                                The Freedom to Go to the College of Your Choice</h1>
+                        </div>
+                    </div>
+                    <div class="container mx-auto flex justify-center md:-mt-56 -mt-20 sm:-mt-40">
+                        <div class="relative sm:w-2/3 w-11/12">
+                            <img src="https://i.pinimg.com/originals/ae/5a/e1/ae5ae16a1f8bdad663c96a699d91e646.jpg"
+                                alt="Sample Page" role="img" class="rounded-lg" />
+                        </div>
+                    </div>
+                </div>
+
+                <!--calendar-->
+                <h1 class="font-medium leading-tight text-5xl mx-5 my-5 text-blue-600 ">Upcoming Important Dates</h1>
+                <div class="flex items-center justify-center py-8 px-4">
+                    <div class="max-w-sm w-full shadow-lg">
+                        <div class="md:p-8 p-5 dark:bg-gray-800 bg-white rounded-t">
+                            <div class="px-4 flex items-center justify-between">
+                                <span tabindex="0"
+                                    class="focus:outline-none  text-base font-bold dark:text-gray-100 text-gray-800">February
+                                    2022</span>
+                                <div class="flex items-center">
+                                    <button aria-label="calendar backward"
+                                        class="focus:text-gray-400 hover:text-gray-400 text-gray-800 dark:text-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="15 6 9 12 15 18" />
+                                        </svg>
+                                    </button>
+                                    <button aria-label="calendar forward"
+                                        class="focus:text-gray-400 hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="icon icon-tabler  icon-tabler-chevron-right" width="24" height="24"
+                                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <polyline points="9 6 15 12 9 18" />
+                                        </svg>
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between pt-12 overflow-x-auto">
+                                <table class="w-full">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Mo</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Tu</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        We</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Th</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Fr</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Sa</p>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="w-full flex justify-center">
+                                                    <p
+                                                        class="text-base font-medium text-center text-gray-800 dark:text-gray-100">
+                                                        Su</p>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center"></div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">1
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">2
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">3</p>
+                                                </div>
+                                            </td>
+                                            <td class="pt-6">
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">4</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">5
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">6
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">7
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="w-full h-full">
+                                                    <div
+                                                        class="flex items-center justify-center w-full rounded-full cursor-pointer">
+                                                        <a role="link" tabindex="0"
+                                                            class="focus:outline-none  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:bg-indigo-500 hover:bg-indigo-500 text-base w-8 h-8 flex items-center justify-center font-medium text-white bg-indigo-700 rounded-full">8</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">9
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">10</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">11</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">12
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">13
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">14
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">15
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">16
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">17</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">18</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">19
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">20
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">21
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">22
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">23
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">24</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100">25</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">26
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">27
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">28
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">29
+                                                    </p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="px-2 py-2 cursor-pointer flex w-full justify-center">
+                                                    <p class="text-base text-gray-500 dark:text-gray-100 font-medium">30
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="md:py-8 py-5 md:px-16 px-5 dark:bg-gray-700 bg-gray-50 rounded-b">
+                            <div class="px-4">
+                                <div class="border-b pb-4 border-gray-400 border-dashed">
+                                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>
+                                    <a tabindex="0"
+                                        class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">University
+                                        A entrance exam</a>
+                                </div>
+                                <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">10:00 AM
+                                    </p>
+                                    <a tabindex="0"
+                                        class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">University
+                                        B entrance exam</a>
+                                </div>
+                                <div class="border-b pb-4 border-gray-400 border-dashed pt-5">
+                                    <p class="text-xs font-light leading-3 text-gray-500 dark:text-gray-300">9:00 AM</p>
+                                    <a tabindex="0"
+                                        class="focus:outline-none text-lg font-medium leading-5 text-gray-800 dark:text-gray-100 mt-2">University
+                                        C entrance exam</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--timeline-->
+                <h1 class="font-medium leading-tight text-5xl mx-5 my-5 text-blue-600">Application Status</h1>
+                <div class="p-4 mt-4">
+                    <div class="container">
+                        <div class="flex flex-col md:grid grid-cols-12 text-gray-50">
+
+                            <div class="flex md:contents">
+                                <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-green-500 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-green-500 shadow text-center">
+                                        <i class="fas fa-check-circle text-white"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-green-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
+                                    <h3 class="font-semibold text-lg mb-1">Application Recieved by Us</h3>
+                                    <p class="leading-tight text-justify w-full">
+                                        21 January 2022, 04:30 PM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex md:contents">
+                                <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-green-500 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-green-500 shadow text-center">
+                                        <i class="fas fa-check-circle text-white"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-green-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
+                                    <h3 class="font-semibold text-lg mb-1">Application Recieved by University</h3>
+                                    <p class="leading-tight text-justify">
+                                        22 January 2022, 01:00 PM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex md:contents">
+                                <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-green-500 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-green-500 shadow text-center">
+                                        <i class="fas fa-check-circle text-white"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-green-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
+                                    <h3 class="font-semibold text-lg mb-1">Your Application is Being Reviewed by
+                                        University</h3>
+                                    <p class="leading-tight text-justify">
+                                        23 January 2022, 04:00 PM
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex md:contents">
+                                <div class="col-start-2 col-end-4 mr-10 md:mx-auto relative">
+                                    <div class="h-full w-6 flex items-center justify-center">
+                                        <div class="h-full w-1 bg-red-500 pointer-events-none"></div>
+                                    </div>
+                                    <div
+                                        class="w-6 h-6 absolute top-1/2 -mt-3 rounded-full bg-red-500 shadow text-center">
+                                        <i class="fas fa-times-circle text-white"></i>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-red-500 col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full">
+                                    <h3 class="font-semibold text-lg mb-1 text-gray-50">Application Rejected by
+                                        University</h3>
+                                    <p class="leading-tight text-justify">
+                                        Reason : Missing Documents
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--blogs-->
+                <h1 class="font-medium leading-tight text-5xl mx-5 my-5 text-blue-600">Blogs</h1>
+                <div class="container my-12 mx-auto px-4 md:px-12">
+                    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://ezyschooling-1.s3.amazonaws.com/expert-article/user_aayushi-exp/2nd_img2.webp">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">Age criteria for
+                                            nursery admissions
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        a year ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Aayushi Aggarwal
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://cdn.pixabay.com/photo/2020/10/17/15/14/girl-5662435__340.jpg">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">
+                                            A Handbook for Online Classes
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        6 months ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Mehnaaz Khan
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://media.istockphoto.com/photos/baby-hand-with-skin-rash-and-allergy-with-red-spot-cause-by-mosquito-picture-id1126642460?b=1&k=20&m=1126642460&s=170667a&w=0&h=r3tuQwPqse2B8YyokuCN_Z1NiarbngBli3JSNPR5gKk=">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">
+                                            Dealing with Allergies in Children
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        3 months ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Riya Pathak
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://cdn.pixabay.com/photo/2015/12/15/06/42/kids-1093758__340.jpg">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">
+                                            Top Twenty Schools In East Delhi
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        a year ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Karishma Saikia
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://cdn.pixabay.com/photo/2018/01/17/07/06/laptop-3087585__340.jpg">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">
+                                            Top Twenty Schools In North Delhi
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        a year ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Prerna Singh
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                        <!-- Column -->
+                        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+
+                            <!-- Article -->
+                            <article class="overflow-hidden rounded-lg shadow-lg">
+
+                                <a href="#">
+                                    <img alt="Placeholder" class="block h-auto w-full"
+                                        src="https://cdn.pixabay.com/photo/2017/08/01/00/38/man-2562325__340.jpg">
+                                </a>
+
+                                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                                    <h1 class="text-lg">
+                                        <a class="no-underline hover:underline text-black" href="#">
+                                            Find the Best Primary School
+                                        </a>
+                                    </h1>
+                                    <p class="text-grey-darker text-sm">
+                                        8 months ago
+                                    </p>
+                                </header>
+
+                                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                                    <a class="flex items-center no-underline hover:underline text-black" href="#">
+                                        <img alt="Placeholder" class="block rounded-full"
+                                            src="https://picsum.photos/32/32/?random">
+                                        <p class="ml-2 text-sm">
+                                            Riya Sree Kaishyap
+                                        </p>
+                                    </a>
+                                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                                        <span class="hidden">Like</span>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                </footer>
+
+                            </article>
+                            <!-- END Article -->
+
+                        </div>
+                        <!-- END Column -->
+
+                    </div>
+                </div>
+                <footer class="text-gray-600 body-font">
+                    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+                        <a
+                            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900" href="/">
+                            <img src="static\logo.png" alt="logo" class="object-scale-down h-5 w-full mt-4">
+                        </a>
+                        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                            <a class="text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                    </path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-3 text-gray-500">
+                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path stroke="none"
+                                        d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                    </path>
+                                    <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </footer>
+            </div>
+            <script type="text/javascript"
+                src="https://demo.dashboardpack.com/architectui-html-free/assets/scripts/main.js">
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

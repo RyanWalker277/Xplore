@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+</head>
+
+<body>
+    <!-- component -->
+    <!-- component -->
+    <div class="bg-gray-200 min-h-screen pt-2 font-mono my-16">
+        <div class="container mx-auto">
+            <div class="inputs w-full max-w-2xl p-6 mx-auto">
+                <h2 class="text-2xl text-gray-900">Profile Settings</h2>
+                <form class="mt-6 border-t border-gray-400 pt-4" action="{% url 'save' %}" method="post">
+                {% csrf_token %}
+                    <div class='flex flex-wrap -mx-3 mb-6'>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'
+                                for='grid-text-1'>email address</label>
+                            <input
+                                class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                id='grid-text-1' type='text' placeholder='Enter email' name = "email" required>
+                        </div>
+                        <div class="personal w-full border-t border-gray-400 pt-4">
+                            <h2 class="text-2xl text-gray-900">Personal info:</h2>
+                            <div class="flex items-center justify-between mt-4">
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label
+                                        class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>first
+                                        name</label>
+                                    <input
+                                        class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                        type='text' name = "firstname" required>
+                                </div>
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label
+                                        class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>last
+                                        name</label>
+                                    <input
+                                        class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                        type='text' name = "lastname" required>
+                                </div>
+                            </div>
+                            <div class='w-full md:w-full px-3 mb-6'>
+                                <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>Class 10th Percentile</label>
+                                <input
+                                    class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                    type='number' name = "marks10" required>
+                            </div>
+                            <div class='w-full md:w-full px-3 mb-6'>
+                                <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>Class 12th Percentile</label>
+                                <input
+                                    class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                                    type='number' name = "marks12" required>
+                            </div>
+                            <div class="flex justify-end">
+                                <button
+                                    class="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md mr-3"
+                                    type="submit">save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
