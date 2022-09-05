@@ -64,6 +64,39 @@ Django version 4.0.6, using settings 'College.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
+
+## Creating Superuser
+
+Clone the repo in your local system
+
+```bash
+python3 manage.py createsuperuser
+```
+You will see a screen like this
+
+```bash
+Username (leave blank to use 'default'):
+```
+Enter a username and press enter , you will see a screen like this
+
+```bash
+Email address:
+```
+Enter an email and press enter , then you will see a screen like this
+
+```bash
+Password:
+```
+Enter a password , then you will see a screen like this
+
+```bash
+Password (again):
+```
+Re-enter the password and you are done! You will see a screen like this
+
+```bash
+Superuser created successfully
+```
 ## Tech Stack
 
 **Client:** HTML , CSS , Javascript , Tailwind CSS
