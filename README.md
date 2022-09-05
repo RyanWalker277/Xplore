@@ -77,3 +77,12 @@ Quit the server with CTRL-BREAK.
 - College application tracking
 - Notification about upcoming competetive examinations
 - Informative blogs about career planning
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+
+##
+Made with ❤ by Anvansh ([@RyanWalker277](https://github.com/RyanWalker277))
