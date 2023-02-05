@@ -35,6 +35,12 @@ def search_result(request):
 def kiet_page(request):
     return render(request , 'kiet.html')
 
+def jss_page(request):
+
+    return render(request,'jss.html')
+def akgec(request):
+    return render(request,'AKGEC.html')
+
 def done(request):
     return render(request , 'done.html')
 
