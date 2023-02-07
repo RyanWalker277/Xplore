@@ -1,5 +1,6 @@
 import email
 import http
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render 
 from .models import Data
 from .models import StudentData
@@ -18,6 +19,7 @@ def purchase(request):
 def register(request):
     return render(request , 'register.html')
 
+@login_required(login_url="/accounts/login/")
 def dashboard(request):
     return render(request , 'dashboard.html')
 

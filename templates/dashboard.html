@@ -66,19 +66,19 @@
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true"
                                             class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">
+                                            <!-- <button type="button" tabindex="0" class="dropdown-item">
                                                 User
                                                 Account
-                                            </button>
-                                            <a href="profile_settings"><button type="button" tabindex="0" class="dropdown-item">Profile Settings</button></a>
-                                            <a href="login">
+                                            </button> -->
+                                            <a href="/accounts/email/"><button type="button" tabindex="0" class="dropdown-item">Change Email</button></a>
+                                            <a href="/accounts/logout/">
                                                 <h6 tabindex="-1" class="dropdown-header">Sign Out</h6>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
-                                    <div class="widget-heading">Sample User</div>
+                                    <div class="widget-heading">{{request.user}}</div>
                                 </div>
                             </div>
                         </div>
