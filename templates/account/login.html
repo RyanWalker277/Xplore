@@ -1,0 +1,107 @@
+{% if not user.is_authenticated %}
+{% load widget_tweaks %}
+{% load account socialaccount %}
+{% load i18n %}
+{% block content %}
+{% get_providers as socialaccount_providers %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css" rel="stylesheet">
+
+            <style>
+            .gradient {
+              background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+            }
+        </style>
+</head>
+<body>
+    {% if messages %}
+    <div>
+      <strong>Messages:</strong>
+      <ul>
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <div class="py-24">
+  <div class="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+        <div class="hidden lg:block lg:w-1/2 bg-cover" style="background-image:url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')"></div>
+        <div class="w-full p-8 lg:w-1/2">
+            <h2 class="text-2xl font-semibold text-gray-700 text-center">Xplore</h2>
+            <p class="text-xl text-gray-600 text-center">Welcome back!</p>
+            {% if socialaccount_providers %}
+            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+
+            {% include "socialaccount/snippets/login_extra.html" %}
+
+            {% endif %}
+
+            <div class="mt-4 flex items-center justify-between">
+                <span class="border-b w-1/5 lg:w-1/4"></span>
+                <a href="#" class="text-xs text-center text-gray-500 uppercase">or login with username</a>
+                <span class="border-b w-1/5 lg:w-1/4"></span>
+            </div>
+            <!-- <form class="login" method="POST" action="{% url 'account_login' %}"> -->
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+
+                {% csrf_token %}
+                {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <div>
+                    <label id="username" class="text-sm font-medium leading-none text-gray-800">
+                        Username
+                    </label>
+                    {{form.login|attr:"class:bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"|attr:"aria-labelledby:email"}}
+                </div>
+                <div class="mt-4" style="float: right;">
+                    <div class="flex justify-between">
+                        <a href="{% url 'account_reset_password' %}" class="text text-gray-800">Forget Password?</a>
+                    </div>
+                </div>
+                <div class="mt-6  w-full">
+                    <label for="pass" class="text-sm font-medium leading-none text-gray-800">
+                        Password
+                    </label>
+                    <div class="relative flex items-center justify-center">
+                            {{form.password|attr:"class:bg-gray-200 border rounded  text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"}}
+                        <div class="absolute right-0 mt-2 mr-3 cursor-pointer">
+                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in-svg5.svg"
+                                alt="viewport">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button role="button"
+                        class="primaryAction focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full" type="submit">{% trans "Sign In" %}</button>
+                </div>
+                <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                <div class="mt-4 flex items-center justify-between">
+                   <span class="border-b w-1/5 md:w-1/4"></span>
+                   <a href="{{ signup_url }}" class="text-xs text-gray-500 uppercase">or sign up</a>
+                   <span class="border-b w-1/5 md:w-1/4"></span>
+               </div> 
+                </form>
+
+                <!-- <div class="mt-8">
+                    <button role="button"
+                        class="primaryAction focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full" type="submit">{% trans "Sign In" %}</button>
+                </div>
+
+            </form> -->
+
+            {% endblock %}
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+{% endif %}
