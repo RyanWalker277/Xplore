@@ -169,3 +169,8 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 LOGIN_REDIRECT_URL = '/dashboard/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = "none"
+
+ACCOUNT_LOGOUT_ON_GET = True

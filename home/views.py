@@ -1,13 +1,15 @@
 import email
 import http
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render 
+from django.shortcuts import render, redirect
 from .models import Data
 from .models import StudentData
 from django.db.models import Q
 
 # Create your views here.
 def index(request):
+    if request.user.is_authenticated:
+        return redirect('/dashboard/')
     return render(request , 'index.html')
 
 def login(request):
